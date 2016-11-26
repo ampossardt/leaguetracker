@@ -2,7 +2,6 @@ C:\Users\Andrew\Documents\Visual Studio 2013\Projects\Git\League Tracker\LeagueT
 C:\Users\Andrew\Documents\Visual Studio 2013\Projects\Git\League Tracker\LeagueTracker\LeagueTrackerWebApp\bin\LeagueTrackerWebApp.dll
 C:\Users\Andrew\Documents\Visual Studio 2013\Projects\Git\League Tracker\LeagueTracker\LeagueTrackerWebApp\bin\LeagueTrackerWebApp.pdb
 C:\Users\Andrew\Documents\Visual Studio 2013\Projects\Git\League Tracker\LeagueTracker\LeagueTrackerWebApp\bin\Antlr3.Runtime.dll
-C:\Users\Andrew\Documents\Visual Studio 2013\Projects\Git\League Tracker\LeagueTracker\LeagueTrackerWebApp\bin\EntityFramework.dll
 C:\Users\Andrew\Documents\Visual Studio 2013\Projects\Git\League Tracker\LeagueTracker\LeagueTrackerWebApp\bin\Microsoft.Data.Edm.dll
 C:\Users\Andrew\Documents\Visual Studio 2013\Projects\Git\League Tracker\LeagueTracker\LeagueTrackerWebApp\bin\Microsoft.Data.OData.dll
 C:\Users\Andrew\Documents\Visual Studio 2013\Projects\Git\League Tracker\LeagueTracker\LeagueTrackerWebApp\bin\Microsoft.Web.Infrastructure.dll
@@ -78,3 +77,7 @@ C:\Users\Andrew\Documents\Visual Studio 2013\Projects\Git\League Tracker\LeagueT
 C:\Users\Andrew\Documents\Visual Studio 2013\Projects\Git\League Tracker\LeagueTracker\LeagueTrackerWebApp\obj\Debug\LeagueTrackerWebApp.csprojResolveAssemblyReference.cache
 C:\Users\Andrew\Documents\Visual Studio 2013\Projects\Git\League Tracker\LeagueTracker\LeagueTrackerWebApp\obj\Debug\LeagueTrackerWebApp.dll
 C:\Users\Andrew\Documents\Visual Studio 2013\Projects\Git\League Tracker\LeagueTracker\LeagueTrackerWebApp\obj\Debug\LeagueTrackerWebApp.pdb
+C:\Users\Andrew\Documents\Visual Studio 2013\Projects\Git\League Tracker\LeagueTracker\LeagueTrackerWebApp\bin\Engine.dll
+C:\Users\Andrew\Documents\Visual Studio 2013\Projects\Git\League Tracker\LeagueTracker\LeagueTrackerWebApp\bin\Dapper.dll
+C:\Users\Andrew\Documents\Visual Studio 2013\Projects\Git\League Tracker\LeagueTracker\LeagueTrackerWebApp\bin\Engine.pdb
+C:\Users\Andrew\Documents\Visual Studio 2013\Projects\Git\League Tracker\LeagueTracker\LeagueTrackerWebApp\bin\Dapper.xml

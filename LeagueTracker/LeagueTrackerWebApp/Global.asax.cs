@@ -6,6 +6,8 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using System.Web.Security;
+using WebMatrix.WebData;
 
 namespace LeagueTrackerWebApp
 {
@@ -22,6 +24,16 @@ namespace LeagueTrackerWebApp
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
+            SetupDefaultRoles();
+        }
+
+        private static void SetupDefaultRoles()
+        {
+            if (!Roles.GetAllRoles().Any())
+            {
+                Roles.CreateRole("Owner");
+                Roles.CreateRole("Coach");
+            }
         }
     }
 }

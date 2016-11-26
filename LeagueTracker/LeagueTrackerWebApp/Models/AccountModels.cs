@@ -1,97 +1,56 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity;
-using System.Globalization;
-using System.Web.Security;
+using Engine.Data.Types;
 
 namespace LeagueTrackerWebApp.Models
 {
-    public class UsersContext : DbContext
-    {
-        public UsersContext()
-            : base("DefaultConnection")
-        {
-        }
-
-        public DbSet<UserProfile> UserProfiles { get; set; }
-    }
-
-    [Table("UserProfile")]
-    public class UserProfile
-    {
-        [Key]
-        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
-        public int UserId { get; set; }
-        public string UserName { get; set; }
-    }
-
-    public class RegisterExternalLoginModel
-    {
-        [Required]
-        [Display(Name = "User name")]
-        public string UserName { get; set; }
-
-        public string ExternalLoginData { get; set; }
-    }
-
-    public class LocalPasswordModel
-    {
-        [Required]
-        [DataType(DataType.Password)]
-        [Display(Name = "Current password")]
-        public string OldPassword { get; set; }
-
-        [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
-        [DataType(DataType.Password)]
-        [Display(Name = "New password")]
-        public string NewPassword { get; set; }
-
-        [DataType(DataType.Password)]
-        [Display(Name = "Confirm new password")]
-        [Compare("NewPassword", ErrorMessage = "The new password and confirmation password do not match.")]
-        public string ConfirmPassword { get; set; }
-    }
-
     public class LoginModel
     {
         [Required]
-        [Display(Name = "User name")]
+        [MaxLength(15)]
         public string UserName { get; set; }
 
         [Required]
+        [MaxLength(20)]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
         public string Password { get; set; }
-
-        [Display(Name = "Remember me?")]
         public bool RememberMe { get; set; }
     }
 
     public class RegisterModel
     {
-        [Required]
-        [Display(Name = "User name")]
-        public string UserName { get; set; }
+        public RegisterModel()
+        {
+            UserTypes = new Dictionary<string, string>
+            {
+                { "Owner", "Owner or commissioner of a league." },
+                { "Coach", "Coach of a team in an existing league." }
+            };
+        }
 
-        [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
-        [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Required(ErrorMessage = "Please enter your first name.")]
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+
+        [Required(ErrorMessage = "Please enter an email address.")]
+        [RegularExpression(@"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$", ErrorMessage = "Please enter a valid email address.")]
+        public string Email { get; set; }
+
+        [Required(ErrorMessage = "Please enter a user name.")]
+        [RegularExpression(@"^[a-zA-Z0-9]{5,15}$", ErrorMessage = "Please enter a valid username. Valid usernames contain alphanumeric characters only and are 5 to 15 characters long.")]
+        public string Username { get; set; }
+
+        [Required(ErrorMessage = "Please enter a password.")]
+        [RegularExpression(@".{5,20}", ErrorMessage = "Passwords must be between 5 and 20 characters.")]
         public string Password { get; set; }
 
-        [DataType(DataType.Password)]
-        [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Required(ErrorMessage = "You must confirm your password.")]
+        [Compare("Password", ErrorMessage = "Passwords must match.")]
         public string ConfirmPassword { get; set; }
-    }
 
-    public class ExternalLogin
-    {
-        public string Provider { get; set; }
-        public string ProviderDisplayName { get; set; }
-        public string ProviderUserId { get; set; }
+        [Required(ErrorMessage = "")]
+        public string UserType { get; set; }
+
+        public Dictionary<string, string> UserTypes { get; set; }
     }
 }
