@@ -1,11 +1,29 @@
 #mainWrap {
   position: absolute;
   top: 0;
-  left: 260px;
-  width: 82%;
+  left: 15%;
+  width: 85%;
   #tipTop {
-    background: lighten($blue, 5%);
-    padding: 32px 0;
-    width: 100%;
+    background: $blue;
+    float: right;
+    overflow: hidden;
+    height: 45px;
+    width: 20%;
+  }
+  #coach {
+    padding-top: 10px;
+    a {
+      color: $yellow;
+      font-weight: bold;
+      padding: 35px;
+      &:link,
+      &:visited {
+        color: $yellow;
+      }
+      &:hover,
+      &active {
+        color: darken($yellow, 25%);
+      }
+    }
   }
 }

@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Yrsa');
 $sans-serif: 'Lato', sans-serif;
 $serif: 'Georgia';
+$ltfont: 'Yrsa', serif;
+
 
 @mixin h1 {
   font-size: $h1-size;
