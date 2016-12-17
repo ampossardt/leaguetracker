@@ -1,0 +1,46 @@
+#form {
+  background: $white;
+  border: 1px solid #0f6769;
+  border-radius: 3px;
+  font-family: "Helvetica Neue", Helvetica, sans;
+  margin: 50px auto;
+  padding: 30px;
+  width: 300px;
+  input {
+    border: 1px solid #adadad;
+    border-radius: 3px;
+    font-size: 14px;
+    height: 30px;
+    margin: 3px auto 10px;
+    padding-left: 5px;
+    width: 95%;
+    &:focus {
+      outline: none !important;
+      border-color: #719ECE;
+    }
+  }
+  label {
+    background: #fff;
+    color: #adadad;
+    position: relative;
+    top: 28px;
+    left: 5px;
+    -webkit-transition: all ease .15s;
+    -moz-transition: all ease .15s;
+    -o-transition: all ease .15s;
+    transition: all ease .15s;
+  }
+  .beamMeUp {
+    background: #fff;
+    color: #719ECE;
+    font-size: 12px;
+    padding: 0 2px;
+    position: relative;
+    top: 10px;
+    left: 8px;
+    -webkit-transition: all ease .15s;
+    -moz-transition: all ease .15s;
+    -o-transition: all ease .15s;
+    transition: all ease .15s;
+  }
+}

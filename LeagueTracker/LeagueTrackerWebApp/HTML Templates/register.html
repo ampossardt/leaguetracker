@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale:1.0" name="viewport">
+
+    <title>League Tracker</title>
+
+    <link rel="stylesheet" href="../UI/css/imports.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="mainWrap">
+    <div id="form">
+        <form>
+            <h2>Register</h2>
+            <label id=firstLab>First name</label><br>
+            <input id=firstName type="text" name="firstName" class="holder"><br>
+            <label id=lastLab>Last name</label><br>
+            <input id=lastName type="text" name="lastLame" class="holder">
+        </form>
+    </div>
+</div>
+</body>
+
+<script>
+    function moveLabelOnFocus (a, b) {
+        $(a).focusin(function(){
+            $(b).addClass('beamMeUp');
+        });
+    }
+
+    function returnLabelOnFocusOut (a, b) {
+        $(a).focusout(function(){
+            if($(a).val() == ""){
+                $(b).removeClass('beamMeUp');
+            }
+        });
+    }
+
+    moveLabelOnFocus('#firstName', '#firstLab');
+    returnLabelOnFocusOut('#firstName', '#firstLab');
+    moveLabelOnFocus('#lastName', '#lastLab');
+    returnLabelOnFocusOut('#lastName', '#lastLab');
+</script>
+</html>

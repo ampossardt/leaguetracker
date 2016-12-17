@@ -1,11 +1,54 @@
 @import url("https://fonts.googleapis.com/css?family=Yrsa");
+@import url("https://fonts.googleapis.com/css?family=Ranga");
+#form {
+  background: #fff;
+  border: 1px solid #0f6769;
+  border-radius: 3px;
+  font-family: "Helvetica Neue", Helvetica, sans;
+  margin: 50px auto;
+  padding: 30px;
+  width: 300px; }
+  #form input {
+    border: 1px solid #adadad;
+    border-radius: 3px;
+    font-size: 14px;
+    height: 30px;
+    margin: 3px auto 10px;
+    padding-left: 5px;
+    width: 95%; }
+    #form input:focus {
+      outline: none !important;
+      border-color: #719ECE; }
+  #form label {
+    background: #fff;
+    color: #adadad;
+    position: relative;
+    top: 28px;
+    left: 5px;
+    -webkit-transition: all ease .15s;
+    -moz-transition: all ease .15s;
+    -o-transition: all ease .15s;
+    transition: all ease .15s; }
+  #form .beamMeUp {
+    background: #fff;
+    color: #719ECE;
+    font-size: 12px;
+    padding: 0 2px;
+    position: relative;
+    top: 10px;
+    left: 8px;
+    -webkit-transition: all ease .15s;
+    -moz-transition: all ease .15s;
+    -o-transition: all ease .15s;
+    transition: all ease .15s; }
+
 html {
   height: 100%;
   width: 100%; }
 
 body {
   background: #c4c4c6;
-  font-family: "Yrsa", serif;
+  font-family: "Ranga", cursive;
   height: 100%;
   margin: 0;
   padding: 0; }
@@ -32,70 +75,5 @@ body {
   body a {
     font-size: 20px;
     text-decoration: none; }
-
-#mainWrap {
-  position: absolute;
-  top: 0;
-  left: 15%;
-  width: 85%; }
-  #mainWrap #tipTop {
-    background: #1f48a1;
-    float: right;
-    overflow: hidden;
-    height: 45px;
-    width: 20%; }
-  #mainWrap #coach {
-    padding-top: 10px; }
-    #mainWrap #coach a {
-      color: #ffcc66;
-      font-weight: bold;
-      padding: 35px; }
-      #mainWrap #coach a:link, #mainWrap #coach a:visited {
-        color: #ffcc66; }
-      #mainWrap #coach a:hover, #mainWrap #coach aactive {
-        color: #e69900; }
-
-#leftRail {
-  background: #1f48a1;
-  height: 100%;
-  margin-right: 0;
-  width: 15%; }
-  #leftRail #logo {
-    background: #fff;
-    padding: 25px; }
-  #leftRail .mainMenu {
-    background: #ffbb33; }
-    #leftRail .mainMenu ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0; }
-      #leftRail .mainMenu ul li {
-        color: #fff;
-        padding: 15px;
-        text-transform: uppercase; }
-        #leftRail .mainMenu ul li a {
-          color: #fff; }
-    #leftRail .mainMenu #subMenu {
-      background: #ffaa00;
-      margin-top: 15px;
-      position: absolute; }
-      #leftRail .mainMenu #subMenu li {
-        text-transform: none; }
-    #leftRail .mainMenu .slideUp {
-      display: none; }
-    #leftRail .mainMenu .hasMenu:hover .slideUp {
-      display: block;
-      -webkit-transition: all ease .5s;
-      -moz-transition: all ease .5s;
-      -o-transition: all ease .5s;
-      transition: all ease .5s; }
-  #leftRail #copyrights {
-    color: #fff;
-    font-size: 12px;
-    margin: 0 auto;
-    padding: 15px;
-    position: absolute;
-    bottom: 15px;
-    text-align: center; }
 
 /*# sourceMappingURL=imports.css.map */
