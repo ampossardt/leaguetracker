@@ -1,15 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Yrsa");
 html {
   height: 100%;
   width: 100%; }
 
-ul {
-  display: block;
-  list-style-type: none;
-  margin: 0;
-  padding: 0; }
-
 body {
-  background: #1b0a71;
+  background: #c4c4c6;
+  font-family: "Yrsa", serif;
   height: 100%;
   margin: 0;
   padding: 0; }
@@ -40,50 +36,59 @@ body {
 #mainWrap {
   position: absolute;
   top: 0;
-  left: 260px;
-  width: 82%; }
+  left: 15%;
+  width: 85%; }
   #mainWrap #tipTop {
-    background: #210c88;
-    padding: 32px 0;
-    width: 100%; }
+    background: #1f48a1;
+    float: right;
+    overflow: hidden;
+    height: 45px;
+    width: 20%; }
+  #mainWrap #coach {
+    padding-top: 10px; }
+    #mainWrap #coach a {
+      color: #ffcc66;
+      font-weight: bold;
+      padding: 35px; }
+      #mainWrap #coach a:link, #mainWrap #coach a:visited {
+        color: #ffcc66; }
+      #mainWrap #coach a:hover, #mainWrap #coach aactive {
+        color: #e69900; }
 
 #leftRail {
-  background: #8b0202;
+  background: #1f48a1;
   height: 100%;
   margin-right: 0;
-  width: 18%; }
-  #leftRail h3 {
-    color: #fff;
-    padding: 25px;
-    margin: 0; }
+  width: 15%; }
+  #leftRail #logo {
+    background: #fff;
+    padding: 25px; }
   #leftRail .mainMenu {
-    background: #8b0202; }
-    #leftRail .mainMenu li {
-      border-top: 1px solid #c70303;
-      border-bottom: 1px solid #630101;
-      color: #fff;
-      padding: 15px 0 15px 15px;
-      text-transform: uppercase; }
-      #leftRail .mainMenu li:last-child {
-        border-bottom: none; }
-      #leftRail .mainMenu li a {
-        color: #fff; }
-        #leftRail .mainMenu li a:hover {
-          color: #d9d9d9; }
-    #leftRail .mainMenu #subMenu .slideBack {
-      position: relative;
-      top: -55px;
-      left: 0;
-      z-index: -2; }
-    #leftRail .mainMenu #subMenu .slideOut {
-      position: relative;
-      top: -55px;
-      left: 150px;
-      z-index: 100; }
-    #leftRail .mainMenu #subMenu li {
-      border-top: 1px solid #9a0202;
-      border-bottom: 1px solid #170000;
-      text-transform: none; }
+    background: #ffbb33; }
+    #leftRail .mainMenu ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
+      #leftRail .mainMenu ul li {
+        color: #fff;
+        padding: 15px;
+        text-transform: uppercase; }
+        #leftRail .mainMenu ul li a {
+          color: #fff; }
+    #leftRail .mainMenu #subMenu {
+      background: #ffaa00;
+      margin-top: 15px;
+      position: absolute; }
+      #leftRail .mainMenu #subMenu li {
+        text-transform: none; }
+    #leftRail .mainMenu .slideUp {
+      display: none; }
+    #leftRail .mainMenu .hasMenu:hover .slideUp {
+      display: block;
+      -webkit-transition: all ease .5s;
+      -moz-transition: all ease .5s;
+      -o-transition: all ease .5s;
+      transition: all ease .5s; }
   #leftRail #copyrights {
     color: #fff;
     font-size: 12px;

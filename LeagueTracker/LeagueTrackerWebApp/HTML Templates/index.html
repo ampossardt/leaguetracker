@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale:1.0" name="viewport">
 
-    <title>Draft Tracker</title>
+    <title>League Tracker</title>
 
     <link rel="stylesheet" href="../UI/css/imports.css" type="text/css">
     <script
@@ -15,26 +15,29 @@
 </head>
 <body>
     <div id="leftRail">
-        <h3>Draft Tracker</h3>
+        <div id="logo">
+            <img src="../UI/img/ltlogo.png" width="1000" height="282" alt="League Tracker Logo">
+        </div>
         <div class="mainMenu">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Something</a></li>
-                <li><a id="dropdown" href="#">Profile</a></li>
+                <li class="hasMenu"><a href="#">Profile</a>
+                    <ul id="subMenu" class="slideUp">
+                        <li><a href="#">My Team</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">Coach</a></li>
+                    </ul>
+                </li>
             </ul>
-            <div id="subMenu">
-                <ul class="slideBack">
-                    <li><a href="#">My Team</a></li>
-                    <li><a href="#">Settings</a></li>
-                    <li><a href="#">Coach</a></li>
-                </ul>
-            </div>
             <p id="copyrights">&copy;2016 All rights reserved.</p>
         </div>
     </div>
     <div id="mainWrap">
         <div id="tipTop">
-            <a>Coach Cruz</a>
+            <div id="coach">
+                <a>Coach Cruz</a>
+            </div>
         </div>
     </div>
 </body>

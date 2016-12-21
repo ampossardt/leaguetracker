@@ -3,15 +3,9 @@ html {
   width: 100%;
 }
 
-ul {
-  display: block;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  background: $blue;
+  background: $grey;
+  font-family: $ltfont;
   height: 100%;
   margin: 0;
   padding: 0;
