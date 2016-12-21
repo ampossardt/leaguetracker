@@ -1,0 +1,58 @@
+#leftRail {
+  background: darken($maroon, 2%);
+  height: 100%;
+  margin-right:0;
+  width: 18%;
+  h3 {
+    color: $white;
+    padding: 25px;
+    margin: 0;
+  }
+  .mainMenu {
+    background: darken($maroon, 2%);
+    li {
+      border-top: 1px solid lighten($maroon, 10%);
+      border-bottom: 1px solid darken($maroon, 10%);
+      color: #fff;
+      padding: 15px 0 15px 15px;
+      text-transform: uppercase;
+      &:last-child {
+        border-bottom: none;
+      }
+      a {
+        color: $white;
+        &:hover {
+          color: darken($white, 15%);
+        }
+      }
+    }
+    #subMenu {
+      .slideBack {
+        position: relative;
+        top: -55px;
+        left: 0;
+        z-index: -2;
+      }
+      .slideOut {
+        position: relative;
+        top: -55px;
+        left: 150px;
+        z-index: 100;
+      }
+      li {
+        border-top: 1px solid lighten($maroon, 1%);
+        border-bottom: 1px solid darken($maroon, 25%);
+        text-transform: none;
+      }
+    }
+  }
+  #copyrights {
+    color: $white;
+    font-size: 12px;
+    margin: 0 auto;
+    padding: 15px;
+    position: absolute;
+    bottom: 15px;
+    text-align: center;
+  }
+}

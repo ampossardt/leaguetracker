@@ -1,0 +1,96 @@
+html {
+  height: 100%;
+  width: 100%; }
+
+ul {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #1b0a71;
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+  body h1 {
+    font-size: 42px;
+    line-height: 44px; }
+  body h2 {
+    font-size: 38px;
+    line-height: 40px; }
+  body h3 {
+    font-size: 34px;
+    line-height: 36px; }
+  body h4 {
+    font-size: 30px;
+    line-height: 32px; }
+  body h5 {
+    font-size: 26px;
+    line-height: 28px; }
+  body h6 {
+    font-size: 22px;
+    line-height: 24px; }
+  body p {
+    font-size: 20px; }
+  body a {
+    font-size: 20px;
+    text-decoration: none; }
+
+#mainWrap {
+  position: absolute;
+  top: 0;
+  left: 260px;
+  width: 82%; }
+  #mainWrap #tipTop {
+    background: #210c88;
+    padding: 32px 0;
+    width: 100%; }
+
+#leftRail {
+  background: #8b0202;
+  height: 100%;
+  margin-right: 0;
+  width: 18%; }
+  #leftRail h3 {
+    color: #fff;
+    padding: 25px;
+    margin: 0; }
+  #leftRail .mainMenu {
+    background: #8b0202; }
+    #leftRail .mainMenu li {
+      border-top: 1px solid #c70303;
+      border-bottom: 1px solid #630101;
+      color: #fff;
+      padding: 15px 0 15px 15px;
+      text-transform: uppercase; }
+      #leftRail .mainMenu li:last-child {
+        border-bottom: none; }
+      #leftRail .mainMenu li a {
+        color: #fff; }
+        #leftRail .mainMenu li a:hover {
+          color: #d9d9d9; }
+    #leftRail .mainMenu #subMenu .slideBack {
+      position: relative;
+      top: -55px;
+      left: 0;
+      z-index: -2; }
+    #leftRail .mainMenu #subMenu .slideOut {
+      position: relative;
+      top: -55px;
+      left: 150px;
+      z-index: 100; }
+    #leftRail .mainMenu #subMenu li {
+      border-top: 1px solid #9a0202;
+      border-bottom: 1px solid #170000;
+      text-transform: none; }
+  #leftRail #copyrights {
+    color: #fff;
+    font-size: 12px;
+    margin: 0 auto;
+    padding: 15px;
+    position: absolute;
+    bottom: 15px;
+    text-align: center; }
+
+/*# sourceMappingURL=imports.css.map */
