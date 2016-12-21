@@ -1,12 +1,13 @@
-﻿using System;
+﻿using System.Linq;
 using System.Net.Mail;
-using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
+using Engine.Data.Types;
+using Engine.Data.Users;
+using Engine.Extensions;
 using LeagueTrackerWebApp.Filters;
 using LeagueTrackerWebApp.Models;
 using WebMatrix.WebData;
-using Engine.Extensions;
 using Engine.Helpers;
 
 namespace LeagueTrackerWebApp.Controllers
@@ -41,12 +42,41 @@ namespace LeagueTrackerWebApp.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Login(LoginModel model, string returnUrl)
         {
+            if (!ModelState.IsValid) return View(model);
+
+            if (!WebSecurity.Login(model.UserName, model.Password, model.RememberMe))
+            {
+                return View(model);
+            }
+
+            return !string.IsNullOrEmpty(returnUrl) ? Redirect(returnUrl) : Redirect("/Account/Home");
+        }
+
+        public ActionResult Home()
+        {
+            if (!WebSecurity.IsAuthenticated) return Redirect("/");
+
+            var roles = Roles.GetRolesForUser(WebSecurity.CurrentUserName);
+
+            ILeagueUser currentUser;
+
+            if (roles.Contains(RegistrationModels.RegisterModel.OwnerValue))
+            {
+                currentUser = new Owner(WebSecurity.CurrentUserId);
+            }
+            else
+            {
+                currentUser = new Coach(WebSecurity.CurrentUserId);
+            }
             
-            return View(model);
+            // Hmm, didn't really think about the fact that either a league owner or a 
+            // coach can go to this page. so we really need to know what kind of user this
+            // is and also figure out a way to render the page differently dependant on that.
+            return View(currentUser);
         }
 
         [AllowAnonymous]
-        public ActionResult Register()
+        public ActionResult ResetPassword()
         {
             return View();
         }
@@ -54,47 +84,12 @@ namespace LeagueTrackerWebApp.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public ActionResult Register(RegisterModel model)
+        public ActionResult ResetPassword(ResetModel model)
         {
             if (!ModelState.IsValid) return View(model);
 
-            if (!WebSecurityExtensions.EmailAlreadyExists(model.Email))
-            {
-                ModelState.AddModelError("EmailTaken", "The email specified already exists. Please try registering again with a valid email address.");
-
-                return View(model);
-            }
-
-            try
-            {
-                var token = WebSecurity.CreateUserAndAccount(model.Username, model.Password,
-                    new
-                    {
-                        model.FirstName,
-                        model.LastName,
-                        model.Email
-                    }, true);
-                
-                if (!string.IsNullOrEmpty(token))
-                {
-                    _mailHelper.SendRegistrationEmail(model.Email, model.FirstName, token);
-                }
-            }
-            catch (InvalidOperationException ex)
-            {
-                // log something here: unable to register
-                return View(model);
-            }
-            catch (HttpException ex)
-            {
-                // couldnt set auth cookie
-                return View(model);
-            }
-
-            ViewBag.Title = "Confirmation Sent";
-            ViewBag.ConfirmationMessage = "Thanks for signing up. A confirmation message has been sent to your email address.";
-
-            return View("~/Views/Shared/Confirm.cshtml");
+            return new AccountHelper().SendResetEmail(model.Email) 
+                ? View(model) : View("~/Views/Shared/Confirmation.cshtml");
         }
     }
 }

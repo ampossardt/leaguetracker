@@ -1,0 +1,47 @@
+﻿@using LeagueTrackerWebApp.Models
+@model RegistrationModels.RegisterModel
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_TierLayout.cshtml";
+}
+
+<h1>Register</h1>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <div>
+        <label>I am the:</label>
+        @Html.DropDownListFor(x => x.UserType, RegistrationModels.RegisterModel.UserTypes.Select(x => new SelectListItem()
+        {
+            Text = x.Value, Value = x.Key
+        }))<br/>
+        <label>First Name *</label><br />
+        @Html.TextBoxFor(x => x.FirstName)<br />
+        @Html.ValidationMessageFor(x => x.FirstName)<br />
+        <label>Last Name</label><br />
+        @Html.TextBoxFor(x => x.LastName)<br/>
+        <label>Email *</label><br />
+        @Html.TextBoxFor(x => x.Email)<br />
+        @Html.ValidationMessageFor(x => x.Email)<br/>
+        <label>Username *</label><br />
+        @Html.TextBoxFor(x => x.Username)<br />
+        @Html.ValidationMessageFor(x => x.Username)<br />
+        <label>Password *</label><br />
+        @Html.PasswordFor(x => x.Password)<br />
+        @Html.ValidationMessageFor(x => x.Password)<br/>
+        <label>Confirm Password *</label><br />
+        @Html.PasswordFor(x => x.ConfirmPassword)<br />
+        @Html.ValidationMessageFor(x => x.ConfirmPassword)<br/>
+        <input type="submit" value="Register"/>
+    </div>
+}
+
+<form action="/Register/DeleteUser" method="post">
+    <input type="text" id="user" name="user" />
+    <input type="submit" value="Delete User"/>
+</form>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+}

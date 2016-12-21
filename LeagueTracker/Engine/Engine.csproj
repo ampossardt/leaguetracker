@@ -68,9 +68,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Types\UserTypes.cs" />
+    <Compile Include="Data\Users\Coach.cs" />
+    <Compile Include="Data\Users\Data\UserProfile.cs" />
+    <Compile Include="Data\Users\Data\UserStatistics.cs" />
+    <Compile Include="Data\Users\ILeagueUser.cs" />
+    <Compile Include="Data\Users\Owner.cs" />
     <Compile Include="Extensions\WebSecurityExtensions.cs" />
+    <Compile Include="Helpers\AccountHelper.cs" />
     <Compile Include="Helpers\MailHelper.cs" />
+    <Compile Include="Helpers\RegistrationHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\ConfigSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

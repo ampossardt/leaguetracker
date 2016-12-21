@@ -1,0 +1,16 @@
+﻿@{
+    Layout = "~/Views/Shared/_TierLayout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+<p>@Html.Raw(ViewBag.ConfirmationMessage)</p>
+@if (ViewBag.Success ?? false)
+{
+    <script type="text/javascript">
+        function redirectToLogin() {
+            window.location = "/Login";
+        }
+
+        setTimeout(redirectToLogin, 3000);
+    </script>
+}

@@ -11,8 +11,8 @@ namespace Engine.Helpers
 {
     public class MailHelper
     {
-        private SmtpClient _client;
-        private string _templateLocation;
+        private readonly SmtpClient _client;
+        private readonly string _templateLocation;
 
         public MailHelper(SmtpClient client)
         {
@@ -22,10 +22,11 @@ namespace Engine.Helpers
 
         public bool SendRegistrationEmail(string email, string name, string authCode)
         {
-            StringBuilder body = new StringBuilder(File.ReadAllText(_templateLocation.Replace("MemorEaseWebApp", "Engine") + "\\Confirm.htm"));
+            var body = new StringBuilder(File.ReadAllText(string.Format("{0}\\{1}", _templateLocation, "Confirm.htm")));
             body.Replace("##FirstName##", name);
             body.Replace("##ConfirmToken##", authCode);
-            body.Replace("##Environment##", "http://localhost:49905");
+            var url = HttpContext.Current.Request.Url;
+            body.Replace("##Environment##", string.Format("http://{0}:{1}", url.Host, url.Port));
 
             try
             {
@@ -47,7 +48,8 @@ namespace Engine.Helpers
         {
             StringBuilder body = new StringBuilder(File.ReadAllText(_templateLocation.Replace("MemorEaseWebApp", "Engine") + "\\Reset.htm"));
             body.Replace("##FirstName##", name);
-            body.Replace("##Environment##", "http://localhost:49905");
+            var url = HttpContext.Current.Request.Url;
+            body.Replace("##Environment##", string.Format("http://{0}:{1}", url.Host, url.Port));
             body.Replace("##ConfirmToken##", resetCode);
 
             try

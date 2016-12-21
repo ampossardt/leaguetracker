@@ -16,7 +16,12 @@ namespace LeagueTrackerWebApp
             routes.MapRoute(
                 name: "Register",
                 url: "register",
-                defaults: new {controller = "Account", action = "Register"});
+                defaults: new {controller = "Register", action = "Register"});
+
+            routes.MapRoute(
+                name: "Login",
+                url: "Login",
+                defaults: new { controller = "Account", action = "Login" });
 
             routes.MapRoute(
                 name: "Default",
