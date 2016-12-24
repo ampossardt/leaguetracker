@@ -1,69 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Yrsa');
-@import url('https://fonts.googleapis.com/css?family=Ranga');
+@import url('https://fonts.googleapis.com/css?family=Righteous|Lobster|Nunito');
+
+$righteous: 'Righteous', cursive;
+$lobster: 'Lobster', cursive;
+$nunito: 'Nunito', sans-serif;
 $sans-serif: 'Lato', sans-serif;
 $serif: 'Georgia';
-$ltfont: 'Yrsa', serif;
-$ranga: 'Ranga', cursive;
 
 // colors
-$yellow: #ffcc66;
-$blue: #1f48a1;
-$white: #fff;
-$grey: #c4c4c6;
-
-// links
-$l1: lighten($blue, 15%);
-
-// Font Sizing
-
-$h1-size: 42px;
-$h1-line-height: 44px;
-
-$h2-size: 38px;
-$h2-line-height: 40px;
-
-$h3-size: 34px;
-$h3-line-height: 36px;
-
-$h4-size: 30px;
-$h4-line-height: 32px;
-
-$h5-size: 26px;
-$h5-line-height: 28px;
-
-$h6-size: 22px;
-$h6-line-height: 24px;
-
-
-// Mixins
-
-
-@mixin h1 {
-  font-size: $h1-size;
-  line-height: $h1-line-height;
-}
-
-@mixin h2 {
-  font-size: $h2-size;
-  line-height: $h2-line-height;
-}
-
-@mixin h3 {
-  font-size: $h3-size;
-  line-height: $h3-line-height;
-}
-
-@mixin h4 {
-  font-size: $h4-size;
-  line-height: $h4-line-height;
-}
-
-@mixin h5 {
-  font-size: $h5-size;
-  line-height: $h5-line-height;
-}
-
-@mixin h6 {
-  font-size: $h6-size;
-  line-height: $h6-line-height;
-}
+$blue: #01acff;
+$lime: #9de263;
+$green: #2fce6f;
+$navy: #2a3d54;
+$denim: #567191;
+$white: #ffffff;

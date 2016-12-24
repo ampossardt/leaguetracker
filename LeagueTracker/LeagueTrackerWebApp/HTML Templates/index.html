@@ -7,19 +7,90 @@
     <title>League Tracker</title>
 
     <link rel="stylesheet" href="../UI/css/bootstrap.css.min.css" type="text/css">
-
     <link rel="stylesheet" href="../UI/css/imports.css" type="text/css">
+
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="mainNav">
-        <h3>League Tracker</h3>
-        <div class="menu">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#"></a></li>
-            </ul>
+    <div id="mainWrapper">
+        <div class="row">
+            <!-- left rail nav start -->
+            <div id="mainNav">
+                <div class="col-sm-12 col-md-3">
+                    <div class="left-rail">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="title">
+                                    <h1>League Tracker</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="login">
+                                    <h4>log in</h4>
+                                    <div class="row">
+                                        <div class="col-xs-offset-1 col-xs-10">
+                                            <div class="form-open">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label for="email">email address:</label>
+                                                        <input type="email" class="form-control" id="email">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="pwd">password:</label>
+                                                        <input type="password" class="form-control" id="pwd">
+                                                    </div>
+                                                    <button type="submit" class="btn btn-default submit">submit</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="register">
+                                    <h4>register</h4>
+                                    <div class="row">
+                                        <div class="col-xs-offset-1 col-xs-10">
+                                            <div class="form-close">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label for="fnamer">first Name:</label>
+                                                        <input type="text" class="form-control" id="fnamer">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="lnamer">last Name:</label>
+                                                        <input type="text" class="form-control" id="lnamer">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="email">email address:</label>
+                                                        <input type="email" class="form-control" id="emailr">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="pwd">password:</label>
+                                                        <input type="password" class="form-control" id="pwdr">
+                                                    </div>
+                                                    <button type="submit" class="btn btn-default submit">Submit</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- left rail nav end -->
+
+            <!-- right content start -->
+            <div id="mainContent">
+                <div class="col-sm-12 col-md-9">
+                    <div class="header">
+                        <h1>Stat keeping, made fun and simple.</h1>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>

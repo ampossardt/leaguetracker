@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Yrsa");
-@import url("https://fonts.googleapis.com/css?family=Ranga");
+@import url("https://fonts.googleapis.com/css?family=Righteous|Lobster|Nunito");
+@import url("../css/bootstrap.css");
 #form {
-  background: #fff;
+  background: #ffffff;
   border: 1px solid #0f6769;
   border-radius: 3px;
   font-family: "Helvetica Neue", Helvetica, sans;
@@ -47,27 +47,33 @@ html {
   width: 100%; }
 
 body {
-  background: #c4c4c6;
-  font-family: "Ranga", cursive;
+  background: #01acff;
+  font-family: "Nunito", sans-serif;
   height: 100%;
   margin: 0;
   padding: 0; }
   body h1 {
-    font-size: 42px;
-    line-height: 44px; }
+    font-family: "Lobster", cursive;
+    font-size: 46px;
+    line-height: 48px; }
   body h2 {
-    font-size: 38px;
-    line-height: 40px; }
+    font-family: "Lobster", cursive;
+    font-size: 40px;
+    line-height: 42px; }
   body h3 {
-    font-size: 34px;
-    line-height: 36px; }
+    font-family: "Lobster", cursive;
+    font-size: 36px;
+    line-height: 38px; }
   body h4 {
-    font-size: 30px;
-    line-height: 32px; }
+    font-family: "Righteous", cursive;
+    font-size: 28px;
+    line-height: 30px; }
   body h5 {
-    font-size: 26px;
-    line-height: 28px; }
+    font-family: "Righteous", cursive;
+    font-size: 24px;
+    line-height: 26px; }
   body h6 {
+    font-family: "Righteous", cursive;
     font-size: 22px;
     line-height: 24px; }
   body p {
@@ -75,5 +81,68 @@ body {
   body a {
     font-size: 20px;
     text-decoration: none; }
+
+#mainWrapper {
+  overflow-x: hidden;
+  width: 100%; }
+
+.left-rail {
+  background: #2a3d54;
+  border-right: 5px solid #9de263;
+  border-left: 5px solid #111821;
+  height: 100vh;
+  padding: 15px; }
+  .left-rail .title {
+    color: #ffffff;
+    padding: 5px 0 30px;
+    text-align: center; }
+  .left-rail .login,
+  .left-rail .register {
+    background: #567191;
+    border-top: 5px solid #9de263;
+    border-bottom: 5px solid #435871;
+    border-radius: 5px;
+    margin: 15px auto; }
+    .left-rail .login h4,
+    .left-rail .register h4 {
+      color: #ffffff;
+      text-align: center; }
+    .left-rail .login .form-close,
+    .left-rail .register .form-close {
+      display: none; }
+    .left-rail .login .form-open,
+    .left-rail .register .form-open {
+      display: block; }
+    .left-rail .login form,
+    .left-rail .register form {
+      margin: 25px auto; }
+      .left-rail .login form input,
+      .left-rail .register form input {
+        border: none; }
+        .left-rail .login form input:focus,
+        .left-rail .register form input:focus {
+          border: 1px solid #2fce6f;
+          outline: none !important; }
+      .left-rail .login form label,
+      .left-rail .register form label {
+        color: #ffffff; }
+      .left-rail .login form .submit,
+      .left-rail .register form .submit {
+        background: #9de263;
+        border: none;
+        border-bottom: 3px solid #75d227;
+        color: #ffffff;
+        font-weight: bolder;
+        outline: none;
+        padding: 10px;
+        width: 100%; }
+        .left-rail .login form .submit:hover,
+        .left-rail .register form .submit:hover {
+          background: #8fde4d; }
+
+.header {
+  padding-top: 20px;
+  color: #ffffff;
+  text-align: center; }
 
 /*# sourceMappingURL=imports.css.map */
